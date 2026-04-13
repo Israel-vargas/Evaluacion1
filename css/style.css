@@ -22,6 +22,20 @@ img {
     height: auto;
 }
 
+#usuarios {
+    margin-top: 2rem;
+}
+
+.usuario {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem auto;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+}
+
 footer {
     background-color: #333;
     color: white;
