@@ -24,7 +24,7 @@ const renderizarMaestros = (arreglo) => {
 				<p>Edad: ${maestro.edad}</p>
 				<p>Habilidad: ${maestro.habilidad}</p>
 				<p>Precio: ${precioFormateado}</p>
-				<button class="btn-favorito" onclick="toggleFavorito(${maestro.id})">Agregar a Favoritos</button>
+				<button class="btn-favorito" onclick="toggleFavorito(${maestro.id})">${maestro.esFavorito ? '❤️ Quitar de Favoritos' : '🤍 Agregar a Favoritos'}</button>
 			</div>
 		`;
 	});
