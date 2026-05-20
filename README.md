@@ -29,11 +29,11 @@ Durante el desarrollo, se utilizó la IA integrada de Visual Studio Code para ag
 * **Prompt utilizado:** "Selecciona el input `#buscador` y agrega un `addEventListener` ('input'). Usa `let` para capturar el valor y el método `filter` para buscar por habilidad. Luego, crea una arrow function `toggleFavorito(id)` que busque el objeto, invierta su estado `esFavorito` y vuelva a llamar a `renderizarMaestros`."
 * **Validación y correcciones:** Se validó que el evento `input` funcionara en tiempo real. Se añadió manualmente el método `.toLowerCase()` tanto al input como a la propiedad del objeto para que la búsqueda (estructura condicional interna) no fallara por diferencias entre mayúsculas y minúsculas.
 
-**4. Rediseño UI/UX Profesional (Criterio: Integración con proyecto anterior)**
-* **Prompt utilizado:** "Actúa como un Diseñador UI/UX y desarrollador FrontEnd experto. Reescribe completamente el archivo `style.css`... Utiliza una paleta de colores que transmita confianza (fondo #f8fafc, azul pizarra oscuro #1e293b, blanco). Para `#contenedor-usuarios` usa CSS Grid en lugar de flexbox: `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`... Agrega sombras, bordes redondeados y efectos hover."
-* **Validación y correcciones:** Se validó la migración estructural de Flexbox a CSS Grid para el contenedor dinámico, garantizando que las tarjetas mantengan un ancho uniforme. Se revisó la paleta cromática generada por la IA para asegurar que los contrastes cumplan con estándares de accesibilidad, logrando una integración visual perfecta con la maquetación inicial.
-
 **4. Validación y correcciones realizadas:**
 ** 1. Se validó que la IA estructurara correctamente la función como *arrow function* según los requerimientos de la evaluación.
   2. Se revisó que la manipulación del DOM no sobreescribiera elementos de forma incorrecta, asegurando el uso de `innerHTML = ''` antes del ciclo `forEach` para limpiar el contenedor.
   3. Se corrigió y validó la lógica del botón: se obligó el uso del atributo `onclick` inyectado directamente en el HTML dinámico (`onclick="toggleFavorito(${maestro.id})"`) para asegurar que el evento reconociera correctamente el `id` de cada usuario al momento de interactuar con el sistema de favoritos.
+
+**5. Rediseño UI/UX Profesional (Criterio: Integración con proyecto anterior)**
+* **Prompt utilizado:** "Actúa como un Diseñador UI/UX y desarrollador FrontEnd experto. Reescribe completamente el archivo `style.css`... Utiliza una paleta de colores que transmita confianza (fondo #f8fafc, azul pizarra oscuro #1e293b, blanco). Para `#contenedor-usuarios` usa CSS Grid en lugar de flexbox: `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`... Agrega sombras, bordes redondeados y efectos hover."
+* **Validación y correcciones:** Se validó la migración estructural de Flexbox a CSS Grid para el contenedor dinámico, garantizando que las tarjetas mantengan un ancho uniforme. Se revisó la paleta cromática generada por la IA para asegurar que los contrastes cumplan con estándares de accesibilidad, logrando una integración visual perfecta con la maquetación inicial.
