@@ -24,11 +24,24 @@ const renderizarMaestros = (arreglo) => {
 				<p>Edad: ${maestro.edad}</p>
 				<p>Habilidad: ${maestro.habilidad}</p>
 				<p>Precio: ${precioFormateado}</p>
-				<button class="btn-favorito">Agregar a Favoritos</button>
+				<button class="btn-favorito" onclick="toggleFavorito(${maestro.id})">Agregar a Favoritos</button>
 			</div>
 		`;
 	});
 };
+
+const toggleFavorito = (id) => {
+	let indice = maestros.findIndex(maestro => maestro.id === id);
+	maestros[indice].esFavorito = !maestros[indice].esFavorito;
+	renderizarMaestros(maestros);
+};
+
+const buscador = document.querySelector('#buscador');
+buscador.addEventListener('input', () => {
+	let valorBuscado = buscador.value.toLowerCase();
+	let maestrosFiltrados = maestros.filter(maestro => maestro.habilidad.toLowerCase().includes(valorBuscado));
+	renderizarMaestros(maestrosFiltrados);
+});
 
 renderizarMaestros(maestros);
 

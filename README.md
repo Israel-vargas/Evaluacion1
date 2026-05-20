@@ -7,4 +7,4 @@
 # Luego Subi los cambios al repositorio 
 # Por defecto de la IA se agrego la carpeta JS considerando que solo es HTML y CSS.
 # Se soluciona la informacion cargada en JS. "necesito una estructura nueva, pero que no se ocupe java, solo index.html y style.css"(mensaje ocupado para reparar la estructura).
-# Evaluación 2 iniciada.
+# prompt: a los usuarios necesito que le agreges su ubucaciones. Puerto Varas, Puerto Montt, Llanquihue, Frutillar, Osorno
